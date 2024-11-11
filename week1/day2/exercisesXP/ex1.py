@@ -50,7 +50,7 @@ print("I have a "+ computer_brand+" computer")
 name = "Mayer Mickael"
 age = "31"
 shoe_size = "43"
-info = "Hello my name is " + name  + " and I am " + age +" old\n I wear size "+ shoe_size + " and I don't know why you are asking for my shoe size :)"
+info = f"Hello my name is {name} and I am {age} old\n I wear size {shoe_size} and I don't know why you are asking for my shoe size :)"
 
 print (info)
 
