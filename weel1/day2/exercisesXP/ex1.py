@@ -1,1 +1,6 @@
-print("Hello world")*4
+
+# exercices 1
+
+# print("Hello world\n"*4)
+
+# ------------------------
