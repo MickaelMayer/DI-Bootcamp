@@ -13,33 +13,17 @@ elif len(string)<= 10:
 elif len(string) >= 10:
     print("string too long")
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Then, print the first and last characters of the given text.
 # The user enters "HelloWorld"
 # Then you have to print 
 # H
 # d
 
+print(string[0])
+print(string[-1])
+
 
 # 3. Using a for loop, construct the string character by character: Print the first character, then the second, then the third, until the full string is printed. For example:
-
 # The user enters "HelloWorld"
 # Then, you have to construct the string character by character
 # H
@@ -47,8 +31,24 @@ elif len(string) >= 10:
 # Hel
 # ... etc
 # HelloWorld
+for_loop = ""
+
+for exe in string:
+    for_loop += exe
+    print(for_loop)
 
 
 # 4. Bonus: Swap some characters around then print the newly jumbled string (hint: look into the shuffle method). For example:
 
 # Hlrolelwod
+
+import random
+
+swap = list(string)
+
+random.shuffle(swap)
+
+shuffle_string = ''.join(swap)
+
+print("Shuffled string:",shuffle_string)
+
