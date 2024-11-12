@@ -11,15 +11,45 @@ print(("Hello world\n"*4) + ("I love python\n"*4))
 # Autumn runs from September (9) to November (11)
 # Winter runs from December (12) to February (2)
 
-month =  int (input("enter a month by his number from 1 to 12"))
+# month =  int (input("enter a month by his number from 1 to 12"))
 
 
 
-if 3 <= month <= 5: 
-    print("spring")
-elif 6 <= month <= 8:
-    print("summer")
-elif 9 <= month <= 11:
-    print("autumn")
-elif month == 12 or 1 <= month <= 2:
-    print("winter")
+# if 3 <= month <= 5: 
+#     print("spring")
+# elif 6 <= month <= 8:
+#     print("summer")
+# elif 9 <= month <= 11:
+#     print("autumn")
+# elif month == 12 or 1 <= month <= 2:
+#     print("winter")
+    
+    
+    
+    
+my_text= """Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+           laboris nisi ut aliquip ex ea commodo consequat. 
+           Duis aute irure dolor in reprehenderit in voluptate velit 
+           esse cillum dolore eu fugiat nulla pariatur. 
+           Excepteur sint occaecat cupidatat non proident, 
+           sunt in culpa qui officia deserunt mollit anim id est laborum."""
+
+lenght= len(my_text)
+
+print(f"the lenght is, {lenght}")
+
+# -------------------------------------
+
+
+# while True:
+#     long_word = input("enter the longest word possible without the letter A").strip()
+    
+#     if "A" in long_word or "a" in long_word:
+#         print("make sure to avoid the letter A")
+#     else:
+#         print("great job ")
+#         break
+
+
+
