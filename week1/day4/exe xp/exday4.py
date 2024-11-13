@@ -91,13 +91,13 @@ for number in range(1,21):
 
 # Write a while loop that will continuously ask the user for their name, unless the input is equal to your name.
 
-name = True
+# name = True
 
-while name :
-    user_name =input("What is your name?")
-    if user_name == "mickael":
-        print("we share the same name!!")   
-        break
+# while name :
+#     user_name =input("What is your name?")
+#     if user_name == "mickael":
+#         print("we share the same name!!")   
+#         break
     
     
     
@@ -111,22 +111,30 @@ while name :
 # If the user’s input is in the favorite fruits list, print “You chose one of your favorite fruits! Enjoy!”.
 # If the user’s input is NOT in the list, print, “You chose a new fruit. I hope you enjoy”.
 
-
-
-
-
-
-
-
-
-
-
-
+# 
+        
 # ======================================
 # exe8
 # Write a loop that asks a user to enter a series of pizza toppings, when the user inputs ‘quit’ stop asking for toppings.
 # As they enter each topping, print a message saying you’ll add that topping to their pizza.
 # Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
+
+pizza_topings = True
+your_toppings = []
+price_per_toppings = 2.5
+while pizza_topings:
+    user_choice =input("choose your pizza toppings. (enter 'quit' when you are done)")
+    if user_choice == 'quit':
+        pizza_topings = False
+    else :
+        your_toppings.append(user_choice)
+        print("This will be added to your pizza")
+        
+print(f"your toppings are {your_toppings}")
+
+final_price = price_per_toppings*len(your_toppings)
+print(f"Final price for toppings is,{final_price}")
+
 
 
 # =================================
