@@ -103,6 +103,8 @@ else :
 
 height = int (input("what is you heigth in CM please?"))
 
+
+
 if height == 145 or height > 145:
     print("please ejoy your ride")
 else :

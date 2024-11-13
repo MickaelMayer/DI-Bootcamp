@@ -51,5 +51,15 @@ print(f"the lenght is, {lenght}")
 #         print("great job ")
 #         break
 
+while True:
+    long_word = input("enter a word without the letter a").strip().lower()
+    
+    print(f"Debug: You entered '{long_word}' (Length: {len(long_word)})") 
+    
+    if "a" in long_word :
+        print("wrong there is an a in it ")
+    else :
+        print("great job")
+        break
 
 
