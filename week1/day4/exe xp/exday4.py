@@ -151,40 +151,48 @@ print(listed_numbers)
 
 # Store the total cost of all the family’s tickets and print it out.
 
+
+# total_cost = 0
+
+# while True:
+#     member_age = input("What is the age of each person in the family? (enter 'done' when you're finished): ")
+       
+#     if member_age.lower() == "done":
+#         break
+#     try:
+        
+#         member_age = int(member_age)
+        
+       
+#         if member_age < 0:
+#             print("Please enter a valid age.")
+#         elif member_age < 3:
+#             total_cost += 0  
+#         elif 3 <= member_age <= 12:
+#             total_cost += 10  
+#         else:
+#             total_cost += 15  
+
+#     except ValueError:
+#         print("Please enter a valid number or 'done' to finish.")
+
+# print(f"The total cost of all the family's tickets is: ${total_cost}")
+
+
 # A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
 
-total_cost = 0
-
-while True:
-    member_age = input("What is the age of each person in the family? (enter 'done' when you're finished): ")
+allowed_in=[]
+teenagers_list = ["dan", "sarah","amit","laura","debbi", "liora"]
+for teenager in teenagers_list:
+    age = int (input(f"what is {teenager} age?"))
+    if age <16 or age >21:
+        allowed_in.append(teenager)
        
-    if member_age.lower() == "done":
-        break
-    try:
-        
-        member_age = int(member_age)
-        
-       
-        if member_age < 0:
-            print("Please enter a valid age.")
-        elif member_age < 3:
-            total_cost += 0  
-        elif 3 <= member_age <= 12:
-            total_cost += 10  
-        else:
-            total_cost += 15  
-
-    except ValueError:
-        print("Please enter a valid number or 'done' to finish.")
-
-
-print(f"The total cost of all the family's tickets is: ${total_cost}")
-
-
-
-
+print("The following teenagers are allowed to enter the movie theater:", allowed_in) 
+# print(f"{teenager} are allow to enter the movie theater")
+    
 
 
 
