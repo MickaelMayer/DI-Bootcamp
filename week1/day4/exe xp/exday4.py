@@ -119,21 +119,21 @@ for number in range(1,21):
 # As they enter each topping, print a message saying you’ll add that topping to their pizza.
 # Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
 
-pizza_topings = True
-your_toppings = []
-price_per_toppings = 2.5
-while pizza_topings:
-    user_choice =input("choose your pizza toppings. (enter 'quit' when you are done)")
-    if user_choice == 'quit':
-        pizza_topings = False
-    else :
-        your_toppings.append(user_choice)
-        print("This will be added to your pizza")
+# pizza_topings = True
+# your_toppings = []
+# price_per_toppings = 2.5
+# while pizza_topings:
+#     user_choice =input("choose your pizza toppings. (enter 'quit' when you are done)")
+#     if user_choice == 'quit':
+#         pizza_topings = False
+#     else :
+#         your_toppings.append(user_choice)
+#         print("This will be added to your pizza")
         
-print(f"your toppings are {your_toppings}")
+# print(f"your toppings are {your_toppings}")
 
-final_price = price_per_toppings*len(your_toppings)
-print(f"Final price for toppings is,{final_price}")
+# final_price = price_per_toppings*len(your_toppings)
+# print(f"Final price for toppings is,{final_price}")
 
 
 
@@ -151,6 +151,22 @@ print(f"Final price for toppings is,{final_price}")
 # A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
+
+under_3 = 0
+age3_12 = 10
+over_12 = 15
+
+
+age_of_family_member = True
+while age_of_family_member :
+     member_age = input("what are the age of each person in the family?(enter 'done' when you finished)")
+     if member_age == "done":
+         age_of_family_member = False
+     else :
+         print("thanks")
+
+
+
 
 
 
