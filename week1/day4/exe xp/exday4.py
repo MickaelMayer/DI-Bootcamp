@@ -81,12 +81,12 @@ print(listed_numbers)
 
 # or with range
 
-for number in range(1,21):
-        print(number)
+# for number in range(1,21):
+#         print(number)
 
-for number in range(1,21):
-    if number %2 == 0 :
-        print(number)
+# for number in range(1,21):
+#     if number %2 == 0 :
+#         print(number)
         
         
 # ========================================
@@ -155,18 +155,36 @@ for number in range(1,21):
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
 
-# under_3 = 0
-# age3_12 = 10
-# over_12 = 15
+total_cost = 0
+
+while True:
+    member_age = input("What is the age of each person in the family? (enter 'done' when you're finished): ")
+       
+    if member_age.lower() == "done":
+        break
+    try:
+        
+        member_age = int(member_age)
+        
+       
+        if member_age < 0:
+            print("Please enter a valid age.")
+        elif member_age < 3:
+            total_cost += 0  
+        elif 3 <= member_age <= 12:
+            total_cost += 10  
+        else:
+            total_cost += 15  
+
+    except ValueError:
+        print("Please enter a valid number or 'done' to finish.")
 
 
-# age_of_family_member = True
-# while age_of_family_member :
-#      member_age = input("what are the age of each person in the family?(enter 'done' when you finished)")
-#      if member_age == "done":
-#          age_of_family_member = False
-#      else :
-#          print("thanks")
+print(f"The total cost of all the family's tickets is: ${total_cost}")
+
+
+
+
 
 
 
@@ -189,7 +207,7 @@ for number in range(1,21):
 # Create an empty list called finished_sandwiches.
 # One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
 # After all the sandwiches have been made, print a message listing each sandwich that was made, such as:
-# I made your tuna sandwich
+# I ohjnomade your tuna sandwich
 # I made your avocado sandwich
 # I made your egg sandwich
 # I made your chicken sandwich
