@@ -5,16 +5,16 @@
 # Concatenate my_fav_numbers and friend_fav_numbers to a new variable called our_fav_numbers.
 
 
-my_fav_numbers = {"18,70,56"}
-my_fav_numbers.add("22,49")
-my_fav_numbers.pop()
-print(my_fav_numbers)
+# my_fav_numbers = {"18,70,56"}
+# my_fav_numbers.add("22,49")
+# my_fav_numbers.pop()
+# print(my_fav_numbers)
 
-friend_fav_numbers = {"38,90,26"}
+# friend_fav_numbers = {"38,90,26"}
 
-our_fav_numbers = my_fav_numbers | friend_fav_numbers
+# our_fav_numbers = my_fav_numbers | friend_fav_numbers
 
-print(our_fav_numbers)
+# print(our_fav_numbers)
 
 # ------------------------------------
 # exe2
@@ -34,17 +34,17 @@ print(our_fav_numbers)
 # Empty the basket.
 # Print(basket)
 
-basket = ["Banana", "Apples", "Oranges", "Blueberries"]
+# basket = ["Banana", "Apples", "Oranges", "Blueberries"]
 
-basket.remove("Banana")
-basket.remove("Blueberries")
-basket.append("Kiwi")
-basket.insert(0,"Apples")
+# basket.remove("Banana")
+# basket.remove("Blueberries")
+# basket.append("Kiwi")
+# basket.insert(0,"Apples")
 
-apple_count= basket.count("Apples") 
+# apple_count= basket.count("Apples") 
 
-print(basket)
-print(f"You have {apple_count} apples in the basket")
+# print(basket)
+# print(f"You have {apple_count} apples in the basket")
 
 
 # =============================================
@@ -82,7 +82,10 @@ print(listed_numbers)
 # or with range
 
 for number in range(1,21):
-    if number %2 ==0 :
+        print(number)
+
+for number in range(1,21):
+    if number %2 == 0 :
         print(number)
         
         
@@ -152,18 +155,18 @@ for number in range(1,21):
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
 
-under_3 = 0
-age3_12 = 10
-over_12 = 15
+# under_3 = 0
+# age3_12 = 10
+# over_12 = 15
 
 
-age_of_family_member = True
-while age_of_family_member :
-     member_age = input("what are the age of each person in the family?(enter 'done' when you finished)")
-     if member_age == "done":
-         age_of_family_member = False
-     else :
-         print("thanks")
+# age_of_family_member = True
+# while age_of_family_member :
+#      member_age = input("what are the age of each person in the family?(enter 'done' when you finished)")
+#      if member_age == "done":
+#          age_of_family_member = False
+#      else :
+#          print("thanks")
 
 
 
