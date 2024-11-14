@@ -59,13 +59,6 @@
 # Can you think of another way to generate a sequence of floats?
 
 
-my_numbers= 1
-listed_numbers =[]
-while my_numbers <= 5:
-    listed_numbers.append(my_numbers)
-    my_numbers += 0.5
-
-print(listed_numbers)
 
 # ==-========================
 # exe5
@@ -183,15 +176,7 @@ print(listed_numbers)
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
 
-allowed_in=[]
-teenagers_list = ["dan", "sarah","amit","laura","debbi", "liora"]
-for teenager in teenagers_list:
-    age = int (input(f"what is {teenager} age?"))
-    if age <16 or age >21:
-        allowed_in.append(teenager)
-       
-print("The following teenagers are allowed to enter the movie theater:", allowed_in) 
-# print(f"{teenager} are allow to enter the movie theater")
+
     
 
 
@@ -215,7 +200,19 @@ print("The following teenagers are allowed to enter the movie theater:", allowed
 # Create an empty list called finished_sandwiches.
 # One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
 # After all the sandwiches have been made, print a message listing each sandwich that was made, such as:
-# I ohjnomade your tuna sandwich
+# I nomade your tuna sandwich
 # I made your avocado sandwich
 # I made your egg sandwich
 # I made your chicken sandwich
+
+
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+finished_sandwiches= []
+while "Pastrami sandwich" in  sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+    finished_sandwiches = sandwich_orders
+    
+print(finished_sandwiches)
+
+for sandwich in finished_sandwiches:
+    print(f"your {sandwich} is ready")
