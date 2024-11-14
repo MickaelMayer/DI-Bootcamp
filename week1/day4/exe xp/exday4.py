@@ -176,8 +176,8 @@
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
 
+teenagers = ["rudy","avi","leon","aya","debbi"]
 
-    
 
 
 
@@ -215,4 +215,4 @@ while "Pastrami sandwich" in  sandwich_orders:
 print(finished_sandwiches)
 
 for sandwich in finished_sandwiches:
-    print(f"your {sandwich} is ready")
+    print(f"your{sandwich} is ready")
