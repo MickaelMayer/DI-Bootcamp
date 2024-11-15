@@ -9,7 +9,14 @@
 
 # number: 17 - length 6 ➞ [17, 34, 51, 68, 85, 102]
 
+number = int(input("write a number"))
+length = int (input("choose a lenght"))
+count = 0
 
+while count < length:
+    print(number)
+    number *=2
+    count+=1
 
 
 
@@ -26,3 +33,7 @@
 # user's word : "cccccaaarrrbbonnnnn" ➞ "carbon"
 # Notes
 # Final strings won’t include words with double letters (e.g. “passing”, “lottery”).
+
+crazy_word = input("white a word with duplicate letters")
+
+final_word = " "
