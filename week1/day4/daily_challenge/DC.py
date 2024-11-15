@@ -9,14 +9,14 @@
 
 # number: 17 - length 6 ➞ [17, 34, 51, 68, 85, 102]
 
-number = int(input("write a number"))
-length = int (input("choose a lenght"))
-count = 0
+# number = int(input("write a number"))
+# length = int (input("choose a lenght"))
+# count = 0
 
-while count < length:
-    print(number)
-    number *=2
-    count+=1
+# while count < length:
+#     print(number)
+#     number *=2
+#     count+=1
 
 
 
@@ -36,4 +36,13 @@ while count < length:
 
 crazy_word = input("white a word with duplicate letters")
 
-final_word = " "
+final_word = ""
+
+
+for letter in crazy_word:
+    if  not final_word or letter != final_word[-1]:
+        final_word += letter
+        
+normal_word = final_word        
+print(f"this is how we right normaly: {normal_word}")
+        
