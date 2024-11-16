@@ -129,6 +129,7 @@ print(brande)
 # Use this list :
 
 # users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 # Analyse these results :
 
 # #1/
