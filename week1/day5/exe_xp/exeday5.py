@@ -37,20 +37,22 @@
         
 # print(total_cost)
 
-
-family = {}
-family_dict = dict(family)
 total_cost = 0
-print(family)
-for age in family.values():
-    if age > 12 :
+while True:
+    name = input("enter your name")
+    age = input("enter your age")
+    age = int(age)
+    family_dict = {name: age}
+    if name or age == "done" :
+        break
+    elif age > 12 :
         total_cost += 15
     elif 3 < age <= 12:
         total_cost +=10 
         
-        
-print(total_cost)
-    
+        print(total_cost)
+ 
+     
     
 
 
