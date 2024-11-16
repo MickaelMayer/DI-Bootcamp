@@ -62,17 +62,7 @@
 # 6. Check if the key international_competitors is in the dictionary. If it is, add the store Desigual.
 # 7. Delete the information about the date of creation.
 # 8. Print the last international competitor.
-# 9. Print the major clothes colors in the US.
-# 10. Print the amount of key value pairs (ie. length of the dictionary).
-# 11. Print the keys of the dictionary.
-# 12. Create another dictionary called more_on_zara with the following details:
-
-# creation_date: 1975 
-# number_stores: 10 000
-
-
-# 13. Use a method to add the information from the dictionary more_on_zara to the dictionary brand.
-# 14. Print the value of the key number_stores. What just happened ?
+#
 
 
 brande ={
@@ -98,11 +88,39 @@ print(f"zara clients are {brande['type_of_clothes']}")
 brande['contry_creation']='spain'
 print(brande)
 
+if 'international_competitors' in brande.keys():
+    brande['international_competitors']+= ["digital"]
+    
+print(brande)
 
+del brande['creation_date']
+print(brande)
 
+#  9. Print the major clothes colors in the US.
 
+print(brande['major_color']['US'])
+# 10. Print the amount of key value pairs (ie. length of the dictionary).
+lenght=len(brande)
 
+print(lenght)
 
+# 11. Print the keys of the dictionary.
+
+print(brande.keys())
+# 12. Create another dictionary called more_on_zara with the following details:
+
+# creation_date: 1975 
+# number_stores: 10 000
+more_on_zara={
+    'creation_date': 1975,
+    'number_stores': 10000
+}
+
+# 13. Use a method to add the information from the dictionary more_on_zara to the dictionary brand.
+brande.update(more_on_zara)
+
+# 14. Print the value of the key number_stores. What just happened ?
+print(brande)
 
 
 
