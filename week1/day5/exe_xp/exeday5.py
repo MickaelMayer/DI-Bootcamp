@@ -37,37 +37,6 @@
         
 # print(total_cost)
 
-total_cost = 0
-while True:
-    name = input("enter your name")
-    age = input("enter your age")
-    age = int(age)
-    family_dict = {name: age}
-    if name or age == "done" :
-        break
-    elif age > 12 :
-        total_cost += 15
-    elif 3 < age <= 12:
-        total_cost +=10 
-        
-        print(total_cost)
- 
-     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # ===================================
@@ -106,17 +75,28 @@ while True:
 # 14. Print the value of the key number_stores. What just happened ?
 
 
+brande ={
+   "name": 'Zara',
+   'creation_date': 1975,  
+   'creator_name' : 'Amancio Ortega Gaona',
+   'type_of_clothes': ['men', 'women', 'children', 'home'],
+   'international_competitors': ['Gap', 'H&M', 'Benetton'],
+   'number_stores': 7000,
+    'major_color': {
+    'France': 'blue', 
+    'Spain': 'red', 
+    'US':['pink', 'green']}
+}
 
+print(brande)
+brande['number_stores'] = 2
 
+print(brande)
 
+print(f"zara clients are {brande['type_of_clothes']}")
 
-
-
-
-
-
-
-
+brande['contry_creation']='spain'
+print(brande)
 
 
 
