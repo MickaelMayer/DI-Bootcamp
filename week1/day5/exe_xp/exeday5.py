@@ -136,16 +136,25 @@ users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 
 # >>> print(disney_users_A)
 # {"Mickey": 0, "Minnie": 1, "Donald": 2, "Ariel": 3, "Pluto": 4}
-
+disney_user_A = {users: index for index, users in enumerate(users)}
+print(disney_user_A)
 # #2/
 
 # >>> print(disney_users_B)
 # {0: "Mickey",1: "Minnie", 2: "Donald", 3: "Ariel", 4: "Pluto"}
+disney_user_B = dict(enumerate(users))
+print(disney_user_B)
 
 # #3/ 
 
 # >>> print(disney_users_C)
 # {"Ariel": 0, "Donald": 1, "Mickey": 2, "Minnie": 3, "Pluto": 4}
+
+
+disney_user_C = {key: index for index, key in enumerate(sorted(disney_user_A))}
+print(disney_user_C)
+
+
 
 
 # Use a for loop to recreate the 1st result. Tip : don’t hardcode the numbers.
@@ -154,3 +163,7 @@ users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 # Only recreate the 1st result for:
 # The characters, which names contain the letter “i”.
 # The characters, which names start with the letter “m” or “p”
+
+
+
+
