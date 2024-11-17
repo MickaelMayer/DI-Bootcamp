@@ -13,11 +13,12 @@
 
 # "grapes" ➞ { "g": [0], "r": [1], "a": [2], "p": [3]}
 
-# user_word= input("enter a word")
 
-# letter_list = [(index, letter)for index, letter in enumerate(user_word)]
+user_word= input("enter a word")
 
-# print(letter_list)
+letter_list = [(index, letter)for index, letter in enumerate(user_word)]
+
+print(letter_list)
 
 
 
