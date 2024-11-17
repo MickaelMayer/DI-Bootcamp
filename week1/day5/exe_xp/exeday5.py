@@ -162,8 +162,16 @@ print(disney_user_C)
 # Use a method to recreate the 3rd result. Hint: The 3rd result is sorted alphabetically.
 # Only recreate the 1st result for:
 # The characters, which names contain the letter “i”.
+
+
+disney_user_I = {users: index for index, users in enumerate(users) if "i" in users}
+print(disney_user_I)
+
 # The characters, which names start with the letter “m” or “p”
 
+
+disney_user_MP = {users: index for index, users in enumerate(users) if users.startswith("M")}
+print(disney_user_MP)
 
 
 
