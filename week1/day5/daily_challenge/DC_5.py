@@ -13,11 +13,11 @@
 
 # "grapes" ➞ { "g": [0], "r": [1], "a": [2], "p": [3]}
 
-user_word= input("enter a word")
+# user_word= input("enter a word")
 
-letter_list = [(index, letter)for index, letter in enumerate(user_word)]
+# letter_list = [(index, letter)for index, letter in enumerate(user_word)]
 
-print(letter_list)
+# print(letter_list)
 
 
 
@@ -47,10 +47,33 @@ print(letter_list)
 # Return “Nothing” if you can’t afford anything from the store.
 # Hint : make sure to convert the amount from dollars to numbers. Create a program that deletes the $ sign, and the comma (for thousands)
 
+item_purchase={
+    "Lemon": "$5",
+    "Book": "$20",
+    "Juice":"$3",
+    "Golden banana": "$540",
+    "Airlines tickets":"$3000"
+}
 
+wallet="$2200"
+for item, price in item_purchase.items():
+    full_price= price.replace("$", "")
+    item_purchase[item] = int (full_price) 
 
+# print(item_purchase)
+clean_wallet = wallet.replace("$","")
+clean_wallet = int(clean_wallet)
 
+affordable_item = []
+for item,price in item_purchase.items():
+    if price <= clean_wallet:
+        affordable_item.append(item)
+    else:
+        print("nothing")
 
+print(affordable_item)
+sorted_list = {key: index for index, key in enumerate(sorted(affordable_item))}
+print(sorted_list)
 
 
 
