@@ -47,6 +47,20 @@ print(letter_list)
 # Return “Nothing” if you can’t afford anything from the store.
 # Hint : make sure to convert the amount from dollars to numbers. Create a program that deletes the $ sign, and the comma (for thousands)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Examples
 
 # The key is the product, the value is the price
