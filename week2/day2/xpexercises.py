@@ -3,10 +3,10 @@
 # Write a function called display_message() that prints one sentence telling everyone what you are learning in this course.
 # Call the function, and make sure the message displays correctly.
 
-def display_message():
-    print('I am learning function in Pyhon')
+# def display_message():
+#     print('I am learning function in Pyhon')
 
-display_message()
+# display_message()
 
 
 # ==================================================
@@ -17,10 +17,10 @@ display_message()
 # For example: “One of my favorite books is Alice in Wonderland”
 # Call the function, make sure to include a book title as an argument when calling the function.
 
-def favorite_book(title):
-    print(f"one of my favorite book is {title}")
+# def favorite_book(title):
+#     print(f"one of my favorite book is {title}")
     
-favorite_book("sefer Hazirchonot")
+# favorite_book("sefer Hazirchonot")
 
 
 
@@ -33,10 +33,10 @@ favorite_book("sefer Hazirchonot")
 # Give the country parameter a default value.
 # Call your function.
 
-def describe_city(city,contry="France"):
-    print(f'{city} is in {contry}')
+# def describe_city(city,contry="France"):
+#     print(f'{city} is in {contry}')
     
-describe_city(city = "paris")
+# describe_city(city = "paris")
 
 
 
@@ -55,7 +55,7 @@ describe_city(city = "paris")
 
 
 
-# import random
+import random
 
 # def compar_number():
 #     number = int (input("enter a number between 1 to 100"))
@@ -83,30 +83,30 @@ describe_city(city = "paris")
 
 # Bonus: Call the function make_shirt() using keyword arguments.
 
-def make_shirt(size,text):
-    print(f"the size is {size} and this is the text{text}")
+# def make_shirt(size,text):
+#     print(f"the size is {size} and this is the text{text}")
     
     
-make_shirt(56,"hello")
+# make_shirt(56,"hello")
 
 
-def make_shirt(size = "L", text = " 'I love Python' "):
-    print(f"the size is {size} and this is the text{text}")
+# def make_shirt(size = "L", text = " 'I love Python' "):
+#     print(f"the size is {size} and this is the text{text}")
     
     
-make_shirt()
+# make_shirt()
 
-def make_shirt(size = "M", text = " 'I love Python' "):
-    print(f"the size is {size} and this is the text{text}")
+# def make_shirt(size = "M", text = " 'I love Python' "):
+#     print(f"the size is {size} and this is the text{text}")
     
     
-make_shirt()
+# make_shirt()
 
-def make_shirt(size = "M", text=""):
-    print(f"the size is {size} and this is the text{text}")
+# def make_shirt(size = "M", text=""):
+#     print(f"the size is {size} and this is the text{text}")
     
     
-make_shirt(size= "M", text=" hello")
+# make_shirt(size= "M", text=" hello")
 
 
 
@@ -123,23 +123,21 @@ make_shirt(size= "M", text=" hello")
 # Call the function show_magicians() to see that the list has actually been modified.
 
 
-magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
+# magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
 
-def show_magicians():
-    print(magician_names)
+# def show_magicians():
+#     print(magician_names)
 
-show_magicians()
+# show_magicians()
 
-def make_great():
-    for i in range(len(magician_names)):
-        magician_names[i] = "The Great " + magician_names[i]
+# def make_great():
+#     for i in range(len(magician_names)):
+#         magician_names[i] = "The Great " + magician_names[i]
 
 
-make_great() 
-show_magicians()
+# make_great() 
+# show_magicians()
     
-
-
 
 
 
@@ -172,6 +170,65 @@ show_magicians()
 # Bonus: Instead of asking for the season, ask the user for the number of the month (1 = January, 12 = December). Determine the season according to the month.
 
 
+# def get_random_temp():
+#     return (random.randint(-10, 40))
+# get_random_temp()
+
+# def main():
+#     temperature = get_random_temp()
+#     if temperature <= 0:
+#         print(f"“Brrr, that’s freezing! Wear some extra layers today, today's temperature is {temperature}”")
+#     elif  1<=  temperature <=16:
+#         print(f"Quite chilly! Don’t forget your coat, today's temperature is {temperature}")
+#     elif 17<=  temperature <= 23:
+#         print(f"still a bit cold today, today's temperature is {temperature}")
+#     elif 24 <= temperature <= 32:
+#         print(f"pefect temperature, today's temperature is {temperature}")
+#     elif 33 <+ temperature <= 40:
+#         print(f"stay home it's dangerous, today's temperature is {temperature}")
+        
+    # print(f'dear customer teh temperature today is {temperatue} Celcius')
+# main()
+        
+# Change the get_random_temp() function:
+# Add a parameter to the function, named ‘season’.
+# Inside the function, instead of simply generating a random number between -10 and 40, set lower and upper limits based on the season, eg. if season is ‘winter’, temperatures should only fall between -10 and 16.
+# Now that we’ve changed get_random_temp(), let’s change the main() function:
+# Before calling get_random_temp(), we will need to decide on a season, so that we can call the function correctly. Ask the user to type in a season - ‘summer’, ‘autumn’ (you can use ‘fall’ if you prefer), ‘winter’, or ‘spring’.
+# Use the season as an argument when calling get_random_temp().
+    
+
+def get_random_temp(season):
+    if season == "winter":
+        return (random.randint(-10, 3))
+    elif season == "spring":
+        return (random.randint(4, 20))
+    elif season == "summer":
+        return (random.randint(21, 40))
+    elif season == "autumn":
+        return (random.randint(0, 15))
+
+# print(get_random_temp("summer"))
+
+def main():
+   season =input("type in a season")
+   return season
+        
+season_input = main()
+weather = get_random_temp(season_input)
+
+print(weather)
+
+
+
+
+
+
+
+
+
+
+# ==============================================
 # 🌟 Exercise 8 : Star Wars Quiz
 # Instructions
 # This project allows users to take a quiz to test their Star Wars knowledge.
