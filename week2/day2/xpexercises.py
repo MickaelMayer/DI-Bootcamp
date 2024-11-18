@@ -198,26 +198,26 @@ import random
 # Use the season as an argument when calling get_random_temp().
     
 
-def get_random_temp(season):
-    if season == "winter":
-        return (random.randint(-10, 3))
-    elif season == "spring":
-        return (random.randint(4, 20))
-    elif season == "summer":
-        return (random.randint(21, 40))
-    elif season == "autumn":
-        return (random.randint(0, 15))
+# def get_random_temp(season):
+#     if season == "winter":
+#         return (random.randint(-10, 3))
+#     elif season == "spring":
+#         return (random.randint(4, 20))
+#     elif season == "summer":
+#         return (random.randint(21, 40))
+#     elif season == "autumn":
+#         return (random.randint(0, 15))
 
-# print(get_random_temp("summer"))
+# # print(get_random_temp("summer"))
 
-def main():
-   season =input("type in a season")
-   return season
+# def main():
+#    season =input("type in a season")
+#    return season
         
-season_input = main()
-weather = get_random_temp(season_input)
+# season_input = main()
+# weather = get_random_temp(season_input)
 
-print(weather)
+# print(weather)
 
 
 
@@ -234,7 +234,11 @@ print(weather)
 # This project allows users to take a quiz to test their Star Wars knowledge.
 # The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
 
-# Here is an array of dictionaries, containing those questions and answers
+# Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
+# Create a function that informs the user of his number of correct/incorrect answers.
+# Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
+# If he had more then 3 wrong answers, ask him to play again.
+
 
 # data = [
 #     {
@@ -262,9 +266,97 @@ print(weather)
 #         "answer": "Wookiee"
 #     }
 # ]
+# wrong_answer = []
+# correct_answer = 0
+# wrong_answer_count = 0
 
 
-# Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
-# Create a function that informs the user of his number of correct/incorrect answers.
-# Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
-# If he had more then 3 wrong answers, ask him to play again.
+# def test(data):
+#     global correct_answer, wrong_answer_count 
+
+#     for item in data:
+#         question = item["question"]
+#         answer = item["answer"]
+#         user_answer = input(f"{question}")
+#         print(f"your answer is {user_answer}, the real answer is {answer}")
+        
+#         if user_answer != answer:
+#             print("wrong")
+#             wrong_answer.append(user_answer)
+#             wrong_answer_count += 1
+            
+#         elif user_answer == answer:
+#             print("good answer")
+#             correct_answer +=1
+
+# test(data)
+# print(f"{wrong_answer} you got {wrong_answer_count} wrong answers and {correct_answer} correct answers " )
+
+
+# Data for the quiz
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977"
+    },
+    {
+        "question": "Who built C-3PO?",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
+
+# Function to ask questions and track answers
+def run_quiz(data):
+    correct_count = 0
+    wrong_count = 0
+    wrong_answers = []
+
+    for item in data:
+        question = item["question"]
+        answer = item["answer"]
+        user_answer = input(f"{question} ")
+
+        if user_answer == answer:
+            print("Good answer")
+            correct_count += 1
+        else:
+            print(f"Wrong. The correct answer is {answer}")
+            wrong_count += 1
+            wrong_answers.append({"question": question, "your_answer": user_answer, "correct_answer": answer})
+
+    return correct_count, wrong_count, wrong_answers
+
+# Function to display the results
+def show_results(correct_count, wrong_count, wrong_answers):
+    print("\n--- Quiz Results ---")
+    print(f"Correct answers: {correct_count}")
+    print(f"Wrong answers: {wrong_count}")
+    
+    if wrong_answers:
+        print("\nDetails of wrong answers:")
+        for item in wrong_answers:
+            print(f"Question: {item['question']}")
+            print(f"Your answer: {item['your_answer']}")
+            print(f"Correct answer: {item['correct_answer']}\n")
+    else:
+        print("Great job! You got all the questions right!")
+
+# Run the quiz and display the results
+correct_count, wrong_count, wrong_answers = run_quiz(data)
+show_results(correct_count, wrong_count, wrong_answers)
