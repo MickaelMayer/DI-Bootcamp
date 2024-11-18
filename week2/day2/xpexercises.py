@@ -54,23 +54,17 @@ describe_city(city = "paris")
 
 import random
 
-def compar_number(number):
-    number = inp
+def compar_number():
+    number = input("enter a number between 1 to 100")
+    random_number = print(random.randint(1, 100))
     
-   
+    if number == random_number:
+        print("it's the same number")
+    else:
+        print("you failed ")
     
-
-
-
-
-
-
-
-
-
-
-
-
+compar_number()
+    
 
 # ===============================================
 # 🌟 Exercise 5 : Let’s create some personalized shirts !
