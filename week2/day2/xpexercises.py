@@ -240,60 +240,6 @@ import random
 # If he had more then 3 wrong answers, ask him to play again.
 
 
-# data = [
-#     {
-#         "question": "What is Baby Yoda's real name?",
-#         "answer": "Grogu"
-#     },
-#     {
-#         "question": "Where did Obi-Wan take Luke after his birth?",
-#         "answer": "Tatooine"
-#     },
-#     {
-#         "question": "What year did the first Star Wars movie come out?",
-#         "answer": "1977"
-#     },
-#     {
-#         "question": "Who built C-3PO?",
-#         "answer": "Anakin Skywalker"
-#     },
-#     {
-#         "question": "Anakin Skywalker grew up to be who?",
-#         "answer": "Darth Vader"
-#     },
-#     {
-#         "question": "What species is Chewbacca?",
-#         "answer": "Wookiee"
-#     }
-# ]
-# wrong_answer = []
-# correct_answer = 0
-# wrong_answer_count = 0
-
-
-# def test(data):
-#     global correct_answer, wrong_answer_count 
-
-#     for item in data:
-#         question = item["question"]
-#         answer = item["answer"]
-#         user_answer = input(f"{question}")
-#         print(f"your answer is {user_answer}, the real answer is {answer}")
-        
-#         if user_answer != answer:
-#             print("wrong")
-#             wrong_answer.append(user_answer)
-#             wrong_answer_count += 1
-            
-#         elif user_answer == answer:
-#             print("good answer")
-#             correct_answer +=1
-
-# test(data)
-# print(f"{wrong_answer} you got {wrong_answer_count} wrong answers and {correct_answer} correct answers " )
-
-
-# Data for the quiz
 data = [
     {
         "question": "What is Baby Yoda's real name?",
@@ -321,7 +267,7 @@ data = [
     }
 ]
 
-# Function to ask questions and track answers
+
 def run_quiz(data):
     correct_count = 0
     wrong_count = 0
@@ -342,14 +288,12 @@ def run_quiz(data):
 
     return correct_count, wrong_count, wrong_answers
 
-# Function to display the results
 def show_results(correct_count, wrong_count, wrong_answers):
-    print("\n--- Quiz Results ---")
+   
     print(f"Correct answers: {correct_count}")
     print(f"Wrong answers: {wrong_count}")
     
     if wrong_answers:
-        print("\nDetails of wrong answers:")
         for item in wrong_answers:
             print(f"Question: {item['question']}")
             print(f"Your answer: {item['your_answer']}")
@@ -357,6 +301,6 @@ def show_results(correct_count, wrong_count, wrong_answers):
     else:
         print("Great job! You got all the questions right!")
 
-# Run the quiz and display the results
+
 correct_count, wrong_count, wrong_answers = run_quiz(data)
 show_results(correct_count, wrong_count, wrong_answers)
