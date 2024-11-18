@@ -131,6 +131,12 @@ def show_magicians():
 show_magicians()
 
 def make_great():
+    for i in range(len(magician_names)):
+        magician_names[i] = "The Great " + magician_names[i]
+
+
+make_great() 
+show_magicians()
     
 
 
