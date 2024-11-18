@@ -52,18 +52,21 @@ describe_city(city = "paris")
 # Create a function that accepts a number between 1 and 100 and generates another number randomly between 1 and 100. Use the random module.
 # Compare the two numbers, if it’s the same number, display a success message, otherwise show a fail message and display both numbers.
 
-import random
 
-def compar_number():
-    number = input("enter a number between 1 to 100")
-    random_number = print(random.randint(1, 100))
+
+
+# import random
+
+# def compar_number():
+#     number = int (input("enter a number between 1 to 100"))
+#     random_number = print(random.randint(1, 100))
     
-    if number == random_number:
-        print("it's the same number")
-    else:
-        print("you failed ")
+#     if number == random_number:
+#         print("it's the same number")
+#     else:
+#         print("you failed ")
     
-compar_number()
+# compar_number()
     
 
 # ===============================================
@@ -80,7 +83,34 @@ compar_number()
 
 # Bonus: Call the function make_shirt() using keyword arguments.
 
+def make_shirt(size,text):
+    print(f"the size is {size} and this is the text{text}")
+    
+    
+make_shirt(56,"hello")
 
+
+def make_shirt(size = "L", text = " 'I love Python' "):
+    print(f"the size is {size} and this is the text{text}")
+    
+    
+make_shirt()
+
+def make_shirt(size = "M", text = " 'I love Python' "):
+    print(f"the size is {size} and this is the text{text}")
+    
+    
+make_shirt()
+
+def make_shirt(size = "M", text=""):
+    print(f"the size is {size} and this is the text{text}")
+    
+    
+make_shirt(size= "M", text=" hello")
+
+
+
+# ================================================================
 # 🌟 Exercise 6 : Magicians …
 # Instructions
 # Using this list of magician’s names
@@ -93,6 +123,21 @@ compar_number()
 # Call the function show_magicians() to see that the list has actually been modified.
 
 
+magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
+
+def show_magicians():
+    print(magician_names)
+
+show_magicians()
+
+def make_great():
+    
+
+
+
+
+
+# ========================================
 # 🌟 Exercise 7 : Temperature Advice
 # Instructions
 # Create a function called get_random_temp().
