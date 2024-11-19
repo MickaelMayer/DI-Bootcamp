@@ -36,3 +36,40 @@ secret_message = secret_message.strip()
 print(secret_message)
         
         
+        
+        
+def draw():
+    # initialize an empty board
+    board = ""
+
+    # there are 5 rows in a standard tic-tac-toe board
+    for i in range(5):
+        # switch between printing vertical and horizontal bars
+        if i%2 == 0:
+            board += "|    " * 4
+        else:
+            board += " --- " * 3
+        # don't forget to start a new line after each row using "\n"
+        board += "\n"
+
+    print(board)
+
+draw()
+
+def draw():
+    board = ''
+
+    for i in range(-1,5):
+
+        if i%2==0:
+            board += '|      ' * 4
+            board += '\n|      |      |      |'
+
+        else:
+            board += ' ______' * 3
+
+        board += '\n'
+    print (board)
+
+draw()
+        
