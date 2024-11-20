@@ -23,4 +23,21 @@ def hidden_word():
             masked_word.append("*")
     print(masked_word)
             
+
+def player_guess():
+    while True:
+        guess = input("chosse a letter")
+        guess = guess.lower()
+    
+        for index, letter in enumerate(word):
+            if letter == guess:
+                masked_word[index]= guess
+                print(masked_word)
+            else:
+            
+            
+    
+    
 hidden_word()
+player_guess()
+    
