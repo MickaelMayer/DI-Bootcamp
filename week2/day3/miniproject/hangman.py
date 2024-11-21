@@ -26,21 +26,24 @@ def hidden_word():
 
 def player_guess():
     wrong_answer = 0
-    guessed_letter =()
     while True:
-        guess = input("chosse a letter")
-        guess = guess.lower()
+        guess = input("chosse a letter: ").lower()
+        found = False
     
         for index, letter in enumerate(word):
             if letter == guess:
                 masked_word[index]= guess
+                found = True
                 print(masked_word)
-            else:
+        if not found:
                 wrong_answer +=1
-                if wrong_answer == 6 :
-                    print(f"you got {wrong_answer} wrong answers")
-                    print("you loose sorry /n you can start again by typing again or 'stop' to quit the game")
-                    break
+                print(f"you got {wrong_answer} wrong answers")
+                
+        if wrong_answer == 6 :
+            print("you loose sorry /n you can start again by typing again or 'stop' to quit the game")
+            break
+        elif "*" not in masked_word:
+            print("congratulation ! you nailed it ")
                     # again = input("write again to start again the game")
                     # if again == "again":
                     #     play()
