@@ -150,10 +150,74 @@ class Zoo:
         print(self.animals)
     
     def sell_animal(self,animal_sold): 
+       if animal_sold in self.animals:
+           self.animals.remove(animal_sold)
+           print(f"{animal_sold} was removed for the Zoo")
+       else :
+           print(f"sorry  {animal_sold} is not in the zoo")
+           print(f"this is the updated list{self.animals}")
+    def sort_animals(self):       
+        self.animals.sort()
+        grouped_animals = {}
+        group_number = 1
+        for animal in self.animals:
+            first_letter = animal[0]
+            if group_number not in grouped_animals:
+                grouped_animals[group_number] = [animal]
+            else:
+                if grouped_animals[group_number][0][0]== first_letter:
+                    grouped_animals[group_number].append(animal) 
+                else:
+                    group_number += 1  # Move to the next group
+                    grouped_animals[group_number] = [animal]
+                    
+        return grouped_animals
+
+    def get_groups(self):
+        grouped_animals = self.sort_animals()  
+        print("Grouped Animals:")
+        for group_number, animals in grouped_animals.items():
+            print(f"Group {group_number}: {animals}")
+
         
-       
-       
-       
+# Instantiate the Zoo class
+ramat_gan_safari = Zoo("Ramat Gan Safari")
+
+# Add some animals to the zoo
+ramat_gan_safari.add_animal("Giraffe")
+ramat_gan_safari.add_animal("Lion")
+ramat_gan_safari.add_animal("Zebra")
+ramat_gan_safari.add_animal("Ape")
+ramat_gan_safari.add_animal("Baboon")
+ramat_gan_safari.add_animal("Bear")
+ramat_gan_safari.add_animal("Eel")
+ramat_gan_safari.add_animal("Emu")
+
+# Test: List all animals in the zoo
+print("Animals in the zoo:")
+ramat_gan_safari.get_animals()
+
+# Test: Remove a specific animal
+print("\nRemoving 'Lion' from the zoo...")
+ramat_gan_safari.sell_animal("Lion")
+
+# Test: Try to remove an animal that isn't in the zoo
+print("\nAttempting to remove 'Tiger' (not in the zoo)...")
+ramat_gan_safari.sell_animal("Tiger")
+
+# Test: List animals after removals
+print("\nAnimals in the zoo after removals:")
+ramat_gan_safari.get_animals()
+
+# Test: Sort and group the animals
+print("\nSorting and grouping animals...")
+ramat_gan_safari.get_groups()
+
+# Test: Adding a duplicate animal (should not add)
+print("\nAdding a duplicate animal 'Zebra'...")
+ramat_gan_safari.add_animal("Zebra")
+ramat_gan_safari.get_animals()        
+           
        
        
        
