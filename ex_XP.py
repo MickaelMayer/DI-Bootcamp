@@ -82,25 +82,26 @@ class Dog:
         return f"{self.name} is barking"
     
     def run_speed(self):
-        return self.weight/(self.age*10)"
+        return self.weight/(self.age*10)
     
     def fight(self,other_dog):
+        self_power= self.run_speed()
+        other_dog_power= other_dog.run_speed()
         
-        
+        if self_power > other_dog_power:
+            return f"{self.name} win the fight"
+        elif self_power < other_dog_power:
+            return f"{other_dog.name} win"
+        else:
+            return "it's a tie"
 
+dog1 = Dog("lolo",17,180)
+dog2 = Dog("lala",12,80)
+dog3 = Dog("lili",3,280)
 
-
-
-
-
-
-
-
-
-
-
-
-
+print(dog1.fight(dog2))  
+print(dog2.fight(dog3))  
+print(dog1.fight(dog3))  
 
 
 # ============================================
@@ -121,6 +122,20 @@ class Dog:
 # “dog_name plays dead”.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ================================================
 # Exercise 4 : Family
 # Instructions
 # Create a class called Family and implement the following attributes:
