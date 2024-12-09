@@ -1,4 +1,5 @@
-import os
+import random
+
 #  Exercise 1 – Random Sentence Generator
 # Instructions
 # Description: In this exercise we will create a random sentence generator. We will do this by asking the user how long the sentence should be and then printing the generated sentence.
@@ -13,25 +14,30 @@ import os
 
 def get_words_from_file():
     try:
-        with open('/words.txt', 'r') as f:
+        with open('/Users/mickael/Desktop/DI-Bootcamp/week3/day6/words.txt', 'r') as f:
             content = f.read()
-            words = content.split()  
+            words = content.split() 
         return words
     except FileNotFoundError:
         print("The file 'words.txt' was not found.")
         return []
-print(os.path.exists('/Users/mickael/Desktop/DI-Bootcamp/week3/day6/words.txt'))
 get_words_from_file()
 
 
-
-
-
-
-
-
-
 # Create another function called get_random_sentence which takes a single parameter called length. The length parameter will be used to determine how many words the sentence should have. The function should:
+
+def get_random_sentence(length):
+    words = get_words_from_file()
+    
+    if length < 2 or length > 20:
+        raise ValueError("Length must be between 2 and 20.")
+    random_words = random.choices(words, k=length)
+    
+    sentence = ''.join(random_words).lower
+    
+    return sentence   
+    
+    
 # use the words list to get your random words.
 # the amount of words should be the value of the length parameter.
 
