@@ -33,7 +33,7 @@ def get_random_sentence(length):
         raise ValueError("Length must be between 2 and 20.")
     random_words = random.choices(words, k=length)
     
-    sentence = ''.join(random_words).lower
+    sentence = ''.join(random_words).lower()
     
     return sentence   
     
@@ -45,6 +45,24 @@ def get_random_sentence(length):
 
 # Create a function called main which will:
 
+def main():
+    print("Choose a length, and we will return you a random sentence.")
+    try:
+        
+        user_choice = int(input("Choose a number between 2 and 20: "))
+        
+        
+        if user_choice < 2 or user_choice > 20:
+            print("Error: The number must be between 2 and 20.")
+        else:
+            
+            sentence = get_random_sentence(user_choice)
+            print(f"Your random sentence is: {sentence}")
+    except ValueError:
+        print("Error: Please enter a valid integer.")
+    
+    
+main()
 # Print a message explaining what the program does.
 
 # Ask the user how long they want the sentence to be. Acceptable values are: an integer between 2 and 20. Validate your data and test your validation!
