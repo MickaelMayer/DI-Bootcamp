@@ -1,5 +1,5 @@
 import random
-
+import json
 #  Exercise 1 – Random Sentence Generator
 # Instructions
 # Description: In this exercise we will create a random sentence generator. We will do this by asking the user how long the sentence should be and then printing the generated sentence.
@@ -62,7 +62,7 @@ def main():
         print("Error: Please enter a valid integer.")
     
     
-main()
+# main()
 # Print a message explaining what the program does.
 
 # Ask the user how long they want the sentence to be. Acceptable values are: an integer between 2 and 20. Validate your data and test your validation!
@@ -92,17 +92,26 @@ main()
 # 🌟 Exercise 2: Working with JSON
 # Instructions
 # import json
-# sampleJson = """{ 
-#    "company":{ 
-#       "employee":{ 
-#          "name":"emma",
-#          "payable":{ 
-#             "salary":7000,
-#             "bonus":800
-#          }
-#       }
-#    }
-# }"""
+sampleJson = """{ 
+   "company":{ 
+      "employee":{ 
+         "name":"emma",
+         "payable":{ 
+            "salary":7000,
+            "bonus":800
+         }
+      }
+   }
+}"""
+
+data =json.loads(sampleJson)
+salary = data['company']['employee']["payable"]["salary"]
+print(f'salary:{salary}')
+data["company"]["employee"]["birth_date"] = "1990-01-01"
+with open("updated_data.json", "w") as file:
+    json.dump(data, file, indent=4)
+
+print("Updated JSON saved to 'updated_data.json'")
 
 
 # Access the nested “salary” key from the JSON-string above.
