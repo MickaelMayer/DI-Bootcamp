@@ -140,21 +140,42 @@ if (totalRent > danRent){
 // Create an object called family with a few key value pairs.
 // Using a for in loop, console.log the keys of the object.
 // Using a for in loop, console.log the values of the object.
-
+const family = {
+    father: "John",
+    mother: "Jane",
+    son: "David",
+    daughter: "Emily",
+    pet: "Buddy"
+  };
+for (let key in family){
+    console.log(`${key}, ${family[key]}`);
+    
+}
 
 // Exercise 6 : Rudolf
 // Instructions
-// const details = {
-//   my: 'name',
-//   is: 'Rudolf',
-//   the: 'reindeer'
-// }
+const details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'reindeer'
+}
 // Given the object above and using a for loop, console.log “my name is Rudolf the reindeer”
-
+let sentence = "";
+for (let key in details) {
+    sentence += `${key} ${details[key]} `; 
+}
+console.log(sentence.trim()); 
 
 // Exercise 7 : Secret Group
 // Instructions
-// const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+
 // A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
 // Hint: a string is an array of letters
 // Console.log the name of their secret society. The output should be “ABJKPS”
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+const secretName = names
+  .map(name => name[0])  
+  .sort()               
+  .join("");            
+
+console.log(secretName); 
