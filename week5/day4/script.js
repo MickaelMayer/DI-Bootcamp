@@ -77,10 +77,10 @@ for (let i = 0; i < colors.length; i++) {
 
 
 
-// let userNumber
-// do{
-//     userNumber = prompt("enter a number")
-// }while(Number(userNumber)<10)
+let userNumber
+do{
+    userNumber = prompt("enter a number")
+}while(Number(userNumber)<10)
 
 
 
