@@ -6,13 +6,33 @@ body {
 
 #color-palette {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.9px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  width: 100px;
 }
 
 .color-button {
-  width: 80px;
-  height: 80px;
-  background-color: white;
+  width: 40px;
+  height: 40px;
   border: 1px solid #ccc;
+}
+
+#empty-grid {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  gap: 1px;
+  width: 600px;
+  height: 600px;
+}
+
+.grid-square {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: none;
+}
+
+.selected {
+  border: 3px solid black;
 }
