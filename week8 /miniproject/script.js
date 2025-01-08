@@ -84,3 +84,10 @@ const colorPalette = document.getElementById("color-palette")
             square.style.backgroundColor = 'white';
         });
     });
+
+
+
+const words = ["hello","hey","hola"];
+
+const isH =  words.some("H")
+// Check if all the elements of the array start with the letter 'h'
