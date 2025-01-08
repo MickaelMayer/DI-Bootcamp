@@ -1,4 +1,4 @@
-// Object provided
+
 let client = "John";
 
 const groceries = {
