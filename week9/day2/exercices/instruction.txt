@@ -1,108 +1,80 @@
-
-🌟 Exercise 2 : Ternary operator
+🌟 Exercise 1 : Colors
 Instructions
-Using the code below:
+Using this array :
 
-function winBattle(){
-    return true;
-}
-Transform the winBattle() function to an arrow function.
-Create a variable called experiencePoints.
-Assign to this variable, a ternary operator. If winBattle() is true, the experiencePoints variable should be equal to 10, else the variable should be equal to 1.
-Console.log the experiencePoints variable.
+const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+Write a JavaScript program that displays the colors in the following order : “1# choice is Blue.” “2# choice is Green.” “3# choice is Red.” ect…
+Check if at least one element of the array is equal to the value “Violet”. If yes, console.log("Yeah"), else console.log("No...")
+Hint : Use the array methods taught in class. Look at the lesson Array Methods.
 
 
-🌟 Exercise 3 : Is it a string ?
+🌟 Exercise 2 : Colors #2
 Instructions
-Write a JavaScript arrow function that checks whether the value of the argument passed, is a string or not. The function should return true or false
-Check out the example below to see the expected output
-Example:
+Using these arrays :
 
-console.log(isString('hello')); 
-//true
-console.log(isString([1, 2, 4, 0]));
-//false
+const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+const ordinal = ["th","st","nd","rd"];
+Write a JavaScript program that displays the colors in the following order : “1st choice is Blue .” “2nd choice is Green.” “3rd choice is Red.” ect…
+Hint : Use the array methods taught in class and ternary operator.
 
 
-🌟 Exercise 4 : Find the sum
+Exercise 3 : Analyzing
 Instructions
-Create a one line function (ie. an arrow function) that receives two numbers as parameters and returns the sum.
+Analyze these pieces of code before executing them. What will be the outputs ?
+------1------
+const fruits = ["apple", "orange"];
+const vegetables = ["carrot", "potato"];
+
+const result = ['bread', ...vegetables, 'chicken', ...fruits];
+console.log(result);
+
+------2------
+const country = "USA";
+console.log([...country]);
+
+------Bonus------
+let newArray = [...[,,]];
+console.log(newArray);
 
 
-🌟 Exercise 5 : Kg and grams
+🌟 Exercise 4 : Employees
 Instructions
-Create a function that receives a weight in kilograms and returns it in grams. (Hint: 1 kg is 1000gr)
+Using this array:
 
-First, use function declaration and invoke it.
-Then, use function expression and invoke it.
-Write in a one line comment, the difference between function declaration and function expression.
-Finally, use a one line arrow function and invoke it.
+const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
+             { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
+             { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
+             { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
+             { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
+             { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
+             { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
+Using the map() method, push into a new array the firstname of the user and a welcome message. You should get an array that looks like this :
+const welcomeStudents = ["Hello Bradley", "Hello Chloe", "Hello Jonathan", "Hello Michael", "Hello Robert", "Hello Wes", "Hello Zach"]
 
 
-🌟 Exercise 6 : Fortune teller
+2. Using the filter() method, create a new array, containing only the Full Stack Residents.
+
+
+3. Bonus : Chain the filter method with a map method, to return an array containing only the lastName of the Full Stack Residents.
+
+
+
+🌟 Exercise 5 : Star Wars
 Instructions
-Create a self invoking function that takes 4 arguments: number of children, partner’s name, geographic location, job title.
-The function should display in the DOM a sentence like "You will be a <job title> in <geographic location>, and married to <partner's name> with <number of children> kids."
+Using this array const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+Use the reduce() method to combine all of these into a single string.
 
 
-🌟 Exercise 7 : Welcome
+🌟 Exercise 6 : Employees #2
 Instructions
-John has just signed in to your website and you want to welcome him.
+Using this object:
 
-Create a Navbar in your HTML file.
-In your js file, create a self invoking funtion that takes 1 argument: the name of the user that just signed in.
-The function should add a div in the nabvar, displaying the name of the user and his profile picture.
-
-
-🌟 Exercise 8 : Juice Bar
-Instructions
-You will use nested functions, to open a new juice bar.
-
-Part I:
-The outer function named makeJuice receives 1 argument: the size of the beverage the client wants - small, medium or large.
-
-The inner function named addIngredients receives 3 ingredients, and displays on the DOM a sentence like The client wants a <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
-
-Invoke the inner function ONCE inside the outer function. Then invoke the outer function in the global scope.
-
-
-Part II:
-In the makeJuice function, create an empty array named ingredients.
-
-The addIngredients function should now receive 3 ingredients, and push them into the ingredients array.
-
-Create a new inner function named displayJuice that displays on the DOM a sentence like The client wants a <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
-
-The client wants 6 ingredients in his juice, therefore, invoke the addIngredients function TWICE. Then invoke once the displayJuice function. Finally, invoke the makeJuice function in the global scope.
-
-
-
-
-
-
-Instructions
-Using this object :
-
-let client = "John";
-
-const groceries = {
-    fruits : ["pear", "apple", "banana"],
-    vegetables: ["tomatoes", "cucumber", "salad"],
-    totalPrice : "20$",
-    other : {
-        paid : true,
-        meansOfPayment : ["cash", "creditCard"]
-    }
-}
-Hint: To do this daily challenge, take a look at today’s lesson Pass By Value & Pass By Reference
-
-Create an arrow function named displayGroceries, that console.logs the 3 fruits from the groceries object. Use the forEach method.
-
-Create another arrow function named cloneGroceries.
-In the function, create a variable named user that is a copy of the client variable. (Tip : make the user variable equal to the client variable)
-Change the client variable to “Betty”. Will we also see this modification in the user variable ? Why ?
-In the function, create a variable named shopping that is equal to the groceries variable.
-Change the value of the totalPrice key to 35$. Will we also see this modification in the shopping object ? Why ?
-Change the value of the paid key to false. Will we also see this modification in the shopping object ? Why ?
-
-Invoke the cloneGroceries function.
+const students = [{name: "Ray", course: "Computer Science", isPassed: true}, 
+               {name: "Liam", course: "Computer Science", isPassed: false}, 
+               {name: "Jenner", course: "Information Technology", isPassed: true}, 
+               {name: "Marco", course: "Robotics", isPassed: true}, 
+               {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
+               {name: "Jamie", course: "Big Data", isPassed: false}];
+Using the filter() method, create a new array, containing the students that passed the course.
+Bonus : Chain the filter method with a forEach method, to congratulate the students with their name and course name (ie. “Good job Jenner, you passed the course in Information Technology”, “Good Job Marco you passed the course in Robotics” ect…)
