@@ -36,7 +36,32 @@ const ordinal = ["th","st","nd","rd"];
 //     colors1.map(color,index => console.log(`${suffix(index+1)} choice is ${color}`))
 // })()
 
+// Exercise 3 : Analyzing
+// Instructions
+// Analyze these pieces of code before executing them. What will be the outputs ?
+// ------1------
+// const fruits = ["apple", "orange"];
+// const vegetables = ["carrot", "potato"];
 
+
+
+// const result = ['bread', ...vegetables, 'chicken', ...fruits];
+// console.log(result);
+
+// ['bread', 'carrot', 'potato', 'chicken', 'apple', 'orange']
+// ------2------
+// const country = "USA";
+// console.log([...country]);
+
+
+// ['U', 'S', 'A']
+
+// ------Bonus------
+// let newArray = [...[,,]];
+// console.log(newArray);
+
+
+// [undefined, undefined]
 
 
 
@@ -76,3 +101,11 @@ const fsresident = users.filter((user) => user.role === 'full stack residemt')
 const fslName = fsresident.map((user)=> user.lastName)
 
 console.log(fslName);
+
+
+
+// Using this array const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+// Use the reduce() method to combine all of these into a single string.
+
+const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
