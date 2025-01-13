@@ -49,6 +49,11 @@ console.log(winners);
 
 
 
+let total = 0
+gameInfo.forEach((player)=>{
+    total += player.score
 
+})
+console.log(total);
 
 // 3. Find and display the total score of the users. (Hint: The total score is 71)
