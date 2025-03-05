@@ -2,32 +2,36 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import UserFavoriteAnimals from './components/UserFavoriteAnimals'
+import Exercise from './components/Exercise3'
+
+
+// function App() {
+//   const myelement = <h1>I Love JSX!</h1>;
+//   const sum = 5 + 5;
+//   const myelement2 = <h1>The sum of 5 + 5 is {sum}</h1>;
+//   const user = {
+//     firstName: 'Bob',
+//     lastName: 'Dylan',
+//     favAnimals : ['Horse','Turtle','Elephant','Monkey']
+//   };
 
 function App() {
-  const [count, setCount] = useState(0)
+  return (
+    <>
+      <Exercise />
+    </>
+  )
+
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <p>Hello World!</p>
+     {myelement}
+     {myelement2}
+      <h3>My name is {user.firstName} {user.lastName}</h3>
+      <UserFavoriteAnimals favAnimals={user.favAnimals} />
     </>
   )
 }
