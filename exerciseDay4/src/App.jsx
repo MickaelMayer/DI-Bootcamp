@@ -5,6 +5,7 @@ import './App.css'
 import Car from './components/Car'
 import Garage from './components/Garage'
 import Events from './components/Events'
+import Phone from './components/Phone'
 
 function App() {
   // const carinfo = {name: "Ford", model: "Mustang", color: "red"};
@@ -14,8 +15,9 @@ function App() {
     <div>
      {/* <Car carInfo={carinfo} />
       <Garage size="small" /> */}
-      <h1>Welcom to the Events page</h1>
-      <Events/>
+      {/* <h1>Welcom to the Events page</h1>
+      <Events/> */}
+      <Phone />
      </div>
     </>
   )
