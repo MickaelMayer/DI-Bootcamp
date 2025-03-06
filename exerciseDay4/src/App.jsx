@@ -9,16 +9,16 @@ import Phone from './components/Phone'
 import Color from './components/Color'
 
 function App() {
-  // const carinfo = {name: "Ford", model: "Mustang", color: "red"};
+  const carinfo = {name: "Ford", model: "Mustang", color: "red"};
 
   return (
     <>
     <div>
-     {/* <Car carInfo={carinfo} />
-      <Garage size="small" /> */}
-      {/* <h1>Welcom to the Events page</h1>
-      <Events/> */}
-      {/* <Phone /> */}
+     <Car carInfo={carinfo} />
+      <Garage size="small" />
+      <h1>Welcom to the Events page</h1>
+      <Events/>
+      <Phone />
       <Color/>
      </div>
     </>
