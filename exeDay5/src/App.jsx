@@ -15,7 +15,7 @@ function App() {
 
       <hr />
 
-      {/* ================== SIMULATION 2 ================== */}
+      
       <h2>Simulation 2: Each BuggyCounter inside its Own ErrorBoundary</h2>
       <ErrorBoundary>
         <BuggyCounter />
@@ -26,7 +26,7 @@ function App() {
 
       <hr />
 
-      {/* ================== SIMULATION 3 ================== */}
+
       <h2>Simulation 3: One BuggyCounter without ErrorBoundary</h2>
       <BuggyCounter />
     </div>
